@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    
+    <!-- SEO & WeChat Sharing Info -->
+    <title>中亚生意快判｜¥9.9 前置判断门票</title>
+    <meta name="description" content="用于中亚/哈萨克斯坦相关项目的前置判断入口：是否可行 / 风险点 / 下一步怎么走。资深实战经验为您把关。">
+    <meta property="og:title" content="中亚生意快判｜¥9.9 前置判断门票">
+    <meta property="og:description" content="用于中亚/哈萨克斯坦相关项目的前置判断入口：是否可行 / 风险点 / 下一步怎么走">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon: 引用同目录下的 favicon.svg -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <style>
+        /* --- Reset & Base Styles --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #1a202c;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Layout --- */
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        .content {
+            padding: 24px;
+            flex: 1;
+        }
+
+        /* --- Typography --- */
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: #4a5568;
+            margin-bottom: 24px;
+            line-height: 1.5;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        /* --- Service List --- */
+        .service-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .service-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 14px;
+            font-size: 15px;
+            color: #2d3748;
+        }
+
+        .service-list li::before {
+            content: "•";
+            color: #3182ce;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .highlight-text {
+            font-weight: 600;
+            color: #2b6cb0;
+        }
+
+        /* --- Buttons --- */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.1s ease, opacity 0.2s;
+            border: none;
+            outline: none;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background-color: #2d3748; /* Dark Business Blue/Grey */
+            color: #ffffff;
+            box-shadow: 0 4px 6px rgba(45, 55, 72, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #3182ce;
+            border: 1px solid #3182ce;
+        }
+
+        /* --- WeChat Section --- */
+        .wechat-card {
+            background-color: #f7fafc;
+            border: 1px solid #edf2f7;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+        }
+
+        .wechat-info {
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        .wechat-id {
+            font-family: monospace;
+            font-weight: 700;
+            color: #2d3748;
+            font-size: 15px;
+            margin-right: 8px;
+        }
+
+        .btn-copy {
+            background: none;
+            border: none;
+            color: #3182ce;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            margin-top: auto;
+            padding-top: 24px;
+            border-top: 1px solid #edf2f7;
+            font-size: 12px;
+            color: #a0aec0;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* --- Modal --- */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(2px);
+        }
+
+        .modal {
+            background-color: #fff;
+            width: 100%;
+            max-width: 360px;
+            border-radius: 12px;
+            padding: 24px 20px;
+            text-align: center;
+            animation: slideUp 0.3s ease-out;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #2d3748;
+        }
+
+        /* Updated Step List Styles */
+        .step-list {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #4a5568;
+            background-color: #f7fafc;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #edf2f7;
+        }
+
+        .step-list ol {
+            padding-left: 20px;
+            margin: 0;
+        }
+        
+        .step-list li {
+            margin-bottom: 8px;
+        }
+        
+        .step-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-highlight {
+            color: #e53e3e;
+            font-weight: 600;
+        }
+
+        /* QR Code Container Styles */
+        .qr-wrapper {
+            background-color: #07c160;
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            display: inline-block;
+            width: 160px; /* Smaller QR for better layout */
+            box-shadow: 0 2px 8px rgba(7, 193, 96, 0.2);
+        }
+
+        .qr-placeholder {
+            width: 100%;
+            background-color: #fff;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .qr-link {
+            display: block;
+            width: 100%;
+            height: 100%;
+            -webkit-touch-callout: default; 
+        }
+
+        .qr-placeholder img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            color: #a0aec0;
+            background: none;
+            border: none;
+            font-size: 24px;
+            line-height: 1;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        /* --- Toast --- */
+        .toast {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.85);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            z-index: 2000;
+        }
+        
+        .toast.show {
+            display: block;
+            animation: fadeInOut 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <!-- Header -->
+            <h1>中亚生意快判｜¥9.9 前置判断门票</h1>
+            <p class="subtitle">用于中亚/哈萨克斯坦相关项目的前置判断入口：是否可行 / 风险点 / 下一步怎么走</p>
+
+            <!-- Service List -->
+            <ul class="service-list">
+                <li>24小时内回复（文字 / 语音二选一）</li>
+                <li>限 3 个核心问题（需填写申请表）</li>
+                <li>输出：结论 + 最大风险点 + 下一步清单</li>
+                <li>不包含代办 / 跑流程 / 资源对接</li>
+                <li>付款后请填写申请表，并添加微信：<span class="highlight-text">jameschen22</span>（备注：中亚生意快判）</li>
+            </ul>
+
+            <!-- Buttons -->
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="openModal()">立即付费（¥9.9）</button>
+                <button class="btn btn-secondary" onclick="goToSurvey()">我已付费，去填写申请表</button>
+            </div>
+
+            <!-- WeChat Copy -->
+            <div class="wechat-card">
+                <div class="wechat-info">
+                    微信号：<span class="wechat-id" id="wechatId">jameschen22</span>
+                </div>
+                <button class="btn-copy" onclick="copyWeChat()">复制微信号</button>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                说明：本服务为信息与判断建议，不构成法律/财务/投资等专业意见；重大决策建议咨询持牌专业人士。
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="paymentModal" class="modal-overlay" onclick="handleOverlayClick(event)">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h3 class="modal-title">支付 ¥9.9 流程</h3>
+            
+            <div class="qr-wrapper">
+                <div class="qr-placeholder">
+                    <a href="pay_qr.png" class="qr-link" target="_blank">
+                        <img src="pay_qr.png" alt="微信收款码" onerror="this.style.display='none'; this.parentNode.innerText='[请上传 pay_qr.png]'">
+                    </a>
+                </div>
+            </div>
+
+            <div class="step-list">
+                <ol>
+                    <li><span class="step-highlight">长按保存</span> 或 <span class="step-highlight">截图</span> 上方二维码</li>
+                    <li>打开微信“扫一扫”，选择相册图片完成支付</li>
+                    <li>支付成功后，请<span class="step-highlight">截图支付凭证</span></li>
+                    <li>点击下方按钮，上传凭证并填写申请表</li>
+                </ol>
+            </div>
+            
+            <button class="btn btn-primary" onclick="goToSurvey()">我已截图，去填写飞书表单</button>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast">已复制</div>
+
+    <script>
+        // --- CONFIGURATION AREA ---
+        const CONFIG = {
+            // Survey Form Link
+            // 【⚠️ 重点】请点击飞书表格右上角“分享表单”，复制链接并填入下方单引号内
+            // 格式示例：'https://bytedance.feishu.cn/share/base/form/xxxx'
+            SURVEY_URL: 'https://ccn9uoumrvrq.feishu.cn/share/base/form/shrcnMQKaLtZSTzkSQtLHsSu2Kc', 
+            
+            // WeChat ID to copy
+            WECHAT_ID: 'jameschen22'
+        };
+
+        // --- FUNCTIONS ---
+
+        function openModal() {
+            document.getElementById('paymentModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+
+        function handleOverlayClick(event) {
+            if (event.target.classList.contains('modal-overlay')) {
+                closeModal();
+            }
+        }
+
+        function goToSurvey() {
+            // Safety check for empty or default URL
+            if (!CONFIG.SURVEY_URL || CONFIG.SURVEY_URL === '' || CONFIG.SURVEY_URL.includes('wj.qq.com')) {
+                alert('⚠️ 请先在 index.html 代码中配置正确的飞书表单链接！\n\n步骤：\n1. 点击飞书表格右上角“分享表单”\n2. 复制链接\n3. 填入代码中的 SURVEY_URL');
+                return;
+            }
+            window.open(CONFIG.SURVEY_URL, '_blank');
+        }
+
+        function copyWeChat() {
+            const textToCopy = CONFIG.WECHAT_ID;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    showToast('已复制');
+                }).catch(err => {
+                    fallbackCopy(textToCopy);
+                });
+            } else {
+                fallbackCopy(textToCopy);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-9999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast('已复制');
+            } catch (err) {
+                showToast('复制失败，请手动复制');
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.innerText = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+    </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
