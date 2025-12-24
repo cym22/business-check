@@ -13,7 +13,7 @@
     <meta property="og:type" content="website">
 
     <!-- Favicon: 引用同目录下的 favicon.svg -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 
     <style>
         /* --- Reset & Base Styles --- */
@@ -324,7 +324,6 @@
             100% { opacity: 0; }
         }
     </style>
-<link rel="stylesheet" href="/index.css">
 </head>
 <body>
 
@@ -372,8 +371,8 @@
             
             <div class="qr-wrapper">
                 <div class="qr-placeholder">
-                    <a href="pay_qr.png" class="qr-link" target="_blank">
-                        <img src="pay_qr.png" alt="微信收款码" onerror="this.style.display='none'; this.parentNode.innerText='[请上传 pay_qr.png]'">
+                    <a href="./pay_qr.png" class="qr-link" target="_blank">
+                        <img src="./pay_qr.png" alt="微信收款码" onerror="this.style.display='none'; this.parentNode.innerText='[请上传 pay_qr.png]'">
                     </a>
                 </div>
             </div>
@@ -381,7 +380,7 @@
             <div class="step-list">
                 <ol>
                     <li><span class="step-highlight">长按保存</span> 或 <span class="step-highlight">截图</span> 上方二维码</li>
-                    <li>打开微信“扫一扫”，选择相册图片完成支付</li>
+                    <li>打开微信"扫一扫"，选择相册图片完成支付</li>
                     <li>支付成功后，请<span class="step-highlight">截图支付凭证</span></li>
                     <li>点击下方按钮，上传凭证并填写申请表</li>
                 </ol>
@@ -398,7 +397,7 @@
         // --- CONFIGURATION AREA ---
         const CONFIG = {
             // Survey Form Link
-            // 【⚠️ 重点】请点击飞书表格右上角“分享表单”，复制链接并填入下方单引号内
+            // 【⚠️ 重点】请点击飞书表格右上角"分享表单"，复制链接并填入下方单引号内
             // 格式示例：'https://bytedance.feishu.cn/share/base/form/xxxx'
             SURVEY_URL: 'https://ccn9uoumrvrq.feishu.cn/share/base/form/shrcnMQKaLtZSTzkSQtLHsSu2Kc', 
             
@@ -425,7 +424,7 @@
         function goToSurvey() {
             // Safety check for empty or default URL
             if (!CONFIG.SURVEY_URL || CONFIG.SURVEY_URL === '' || CONFIG.SURVEY_URL.includes('wj.qq.com')) {
-                alert('⚠️ 请先在 index.html 代码中配置正确的飞书表单链接！\n\n步骤：\n1. 点击飞书表格右上角“分享表单”\n2. 复制链接\n3. 填入代码中的 SURVEY_URL');
+                alert('⚠️ 请先在 index.html 代码中配置正确的飞书表单链接！\n\n步骤：\n1. 点击飞书表格右上角"分享表单"\n2. 复制链接\n3. 填入代码中的 SURVEY_URL');
                 return;
             }
             window.open(CONFIG.SURVEY_URL, '_blank');
@@ -470,6 +469,5 @@
             }, 2000);
         }
     </script>
-<script type="module" src="/index.tsx"></script>
 </body>
 </html>
